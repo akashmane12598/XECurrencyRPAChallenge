@@ -1,0 +1,31 @@
+﻿<process name="XECurrencyProcess" version="1.0" bpversion="6.9.0.26970" narrative="" byrefcollection="true" preferredid="798fb744-c5a3-4974-9a87-f352c3a5546a">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="45ef223e-d012-41c0-886d-d532b3821859" name="Start" type="Start">
+    <display x="15" y="-105" />
+    <onsuccess>36d1f456-0198-4ed5-b7df-3ea9715fc27e</onsuccess>
+  </stage>
+  <stage stageid="e7321b7c-9763-4659-ac81-a59a6960d8c2" name="End" type="End">
+    <display x="15" y="30" />
+  </stage>
+  <stage stageid="47322194-9825-411e-8856-26cb8b4187c5" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="36d1f456-0198-4ed5-b7df-3ea9715fc27e" name="XECurrency::Launch" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-60" />
+    <onsuccess>abf85107-f46d-4e2e-a5eb-4fcb2ea25d55</onsuccess>
+    <resource object="XECurrency" action="Launch" />
+  </stage>
+  <stage stageid="abf85107-f46d-4e2e-a5eb-4fcb2ea25d55" name="XECurrency::ReadData" type="Action">
+    <loginhibit onsuccess="true" />
+    <display x="15" y="-15" />
+    <onsuccess>e7321b7c-9763-4659-ac81-a59a6960d8c2</onsuccess>
+    <resource object="XECurrency" action="ReadData" />
+  </stage>
+</process>
